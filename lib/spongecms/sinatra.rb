@@ -6,14 +6,16 @@ module Spongecms
 
   class Sinatra < Sinatra::Base
     # Use sinatra as middleware
-    ROOT = Spongecms::Configuration.root
     include Spongecms::Themes
+    configure do
+      set :root, Spongecms::Configuration.root
 
-    # Set views and static files
-    set :views, theme
-    set :public, static_files
+      # Set views and static files
+      set :views, theme
+      set :public, static_files
+    end
 
-    get "/#{ROOT}" do
+    get "/#{settings.root}" do
       haml :index 
     end
 

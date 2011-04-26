@@ -14,6 +14,7 @@ module Spongecms
       def static_files
         File.join(theme, 'public')    
       end
+
       protected
       def theme_dirs
         [Spongecms::Configuration.theme_dir, Spongecms::Configuration.default_theme_dir].flatten.uniq 
