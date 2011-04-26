@@ -2,6 +2,11 @@
 require 'active_support'
 require 'sinatra'
 
+if defined?(Rails)
+  require 'rails'
+  require 'spongecms/rails'
+end
+
 require 'spongecms/configuration'
 
 module Spongecms
