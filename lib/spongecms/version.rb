@@ -2,8 +2,8 @@
 module Spongecms
   module Version
     MAJOR = 0
-    MINOR = 1
-    PATCH = 2
+    MINOR = 2
+    PATCH = 0
     BUILD = "beta"
 
     STRING = [MAJOR, MINOR, PATCH, BUILD].compact.join('.')

@@ -1,5 +1,6 @@
 # encoding: utf-8
 require 'sinatra/base'
+require 'spongecms/configuration'
 require 'spongecms/themes'
 
 module Spongecms
