@@ -4,7 +4,7 @@ require 'sinatra'
 
 if defined?(Rails)
   require 'rails'
-  require 'spongecms/rails'
+  require 'spongecms/railtie'
 end
 
 require 'spongecms/configuration'

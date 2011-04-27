@@ -11,8 +11,10 @@ end
 require 'rake'
 
 require 'jeweler'
+require './lib/spongecms/version.rb'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
+  gem.version = Spongecms::Version::STRING
   gem.name = "spongecms"
   gem.homepage = "http://github.com/zires/spongecms"
   gem.license = "MIT"
