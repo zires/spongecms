@@ -14,5 +14,16 @@ $:.unshift File.dirname(__FILE__)
 require 'rspec'
 require 'spongecms'
 require 'rack/test'
+require 'webrat'
+
+Webrat.configure do |config|
+  config.mode = :rack
+end
 
 ENV['RACK_ENV'] = 'test'
+
+RSpec.configure do |config|
+  config.include Rack::Test::Methods
+  config.include Webrat::Methods
+  config.include Webrat::Matchers
+end

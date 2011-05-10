@@ -1,0 +1,11 @@
+!!! Basic
+%html
+  %head
+    %title= "Spongecms - #{@title}"
+    %script{:type => "text/javascript",
+            :src => "/javascripts/spongecms.js"}
+    %link{:type => "text/css", :rel => "stylesheet",
+      :media => "all", :href => "/stylesheets/spongecms.css"}
+
+  %body
+    = yield

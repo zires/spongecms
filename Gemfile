@@ -9,6 +9,7 @@ gem 'activesupport', '~>3.0'
 group :test do
   gem 'rspec'
   gem 'rack-test'
+  gem 'webrat'
 end
 
 group :development do
