@@ -1,11 +1,10 @@
 !!! Basic
-%html
+%html.no-js
   %head
     %title= "Spongecms - #{@title}"
-    %script{:type => "text/javascript",
-            :src => "/javascripts/spongecms.js"}
-    %link{:type => "text/css", :rel => "stylesheet",
-      :media => "all", :href => "/stylesheets/spongecms.css"}
-
+    = javascript_include_tag 'modernizr-1.7.min', 'spongecms'
+    = stylesheet_link_tag 'spongecms.css' 
   %body
-    = yield
+    %section.section
+    %section.main
+      = yield

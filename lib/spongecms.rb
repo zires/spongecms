@@ -1,6 +1,7 @@
 # encoding: utf-8
 require 'active_support'
 require 'sinatra'
+require 'padrino-helpers'
 
 if defined?(Rails)
   require 'rails'
@@ -22,5 +23,4 @@ module Spongecms
 
 end
 
-require 'spongecms/sinatra'
-require 'spongecms/version'
+require 'spongecms/core'

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Spongecms::Sinatra do
+describe Spongecms::Core do
   
   def app
-    Spongecms::Sinatra
+    Spongecms::Core
   end
   
   it "should have spongecms root page" do

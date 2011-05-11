@@ -1,7 +1,9 @@
 source 'http://rubygems.org'
+source "http://gems.github.com"
 
+#gem 'padrino', '0.9.27'
 gem 'sinatra'
-
+gem 'padrino-helpers'
 gem 'haml'
 
 gem 'activesupport', '~>3.0'
