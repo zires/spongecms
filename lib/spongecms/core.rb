@@ -9,7 +9,7 @@ module Spongecms
     # spongecms index page
     get "/#{settings.path}" do
       @title = "Dashboard"
-      haml 'index'
+      haml :index
     end
 
   end
