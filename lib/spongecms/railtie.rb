@@ -1,4 +1,4 @@
-require 'spongecms/sinatra'
+require 'spongecms/core'
 
 module Spongecms
   class Railtie < Rails::Railtie

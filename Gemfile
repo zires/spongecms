@@ -5,7 +5,6 @@ source "http://gems.github.com"
 gem 'sinatra'
 gem 'padrino-helpers'
 gem 'haml'
-
 gem 'activesupport', '~>3.0'
 
 group :test do
