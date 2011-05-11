@@ -3,7 +3,7 @@ require 'spongecms/core/base'
 
 module Spongecms
 
-  class Core < ::Base
+  class Core < Spongecms::Base
     # Use ::Core as middleware
 
     # spongecms index page
