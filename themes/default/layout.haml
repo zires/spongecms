@@ -5,6 +5,21 @@
     = javascript_include_tag 'modernizr-1.7.min', 'spongecms'
     = stylesheet_link_tag 'spongecms.css' 
   %body
-    %section.section
-    %section.main
-      = yield
+    %header.user-info
+      %h1= link_to('SpongeCMS', '/spongecms')
+    %section.main.clearfix
+      %aside.main-left
+        %nav.navigation
+          %ul
+            %li.current= link_to('Dashboard', '/spongecms', :class => 'current dashboard')
+            %li= link_to('Image Gallery', '/spongecms')
+            %li= link_to('Plugins', '/spongecms')
+            %li= link_to('Users', '/spongecms')
+            %li= link_to('Settings', '/spongecms')
+      %section.container
+        %section.content
+          = yield
+        %footer.footer.clearfix.top-border
+          &copy; Copyright 2010 by SpongeCMS
+
+

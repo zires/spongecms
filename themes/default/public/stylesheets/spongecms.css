@@ -71,7 +71,7 @@ pre, code, kbd, samp {
 }
 
 html {
-  overflow-y: scroll;
+  overflow:hidden;
 }
 
 nav ul, nav li {
@@ -110,7 +110,24 @@ pre {
 .ie7 img {
 }
 
+a{
+  text-decoration:none;
+}
+
+a:hover{
+  color: #363636;
+}
+
+a:visited{
+  color: #363636;
+}
+
+a:active{
+  color:#363636;
+}
+
 a:link {
+  text-decoration:none;
 }
 
 /* === end css reset === */
@@ -118,9 +135,158 @@ a:link {
 /* --- general css style --- */
 
 body{
-  background-color: #E6E6E6;
+  background-color: #F6F6F6;
   font: 13px/1.231 'PTSansRegular',Arial,sans-serif;
-  color: #666666;
+  color: #363636;
+  text-shadow: 0 1px 0 #FFFFFF;
+  min-width:750px;
+}
+
+.clearfix{
+  clear:both;
+  display:block;
+  overflow:hidden;
+}
+
+.left{
+  float:left;
+}
+
+.top-border{
+  border-top: 3px solid #E6E6E6;
 }
 
 /* === end general css style === */
+/* --- header user info --- */
+.user-info{
+  height: 50px;
+  width: 100%;
+  text-shadow: 1px 0 0 #666666;
+  color: #CCCCCC;
+  background-color: #4B535D;
+  -moz-box-shadow: 0 2xp 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2xp 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  background-image: -moz-linear-gradient(center top , #4B535D, #3D444C);
+  background-image: -webkit-linear-gradient(center top , #4B535D, #3D444C);
+  behavior: url(ie-css3.htc);
+}
+
+.user-info h1{
+  float: left;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+  padding-right: 25px;
+  text-align: right;
+  width: 225px;
+}
+
+.user-info h1 a{
+  color:#F6F6F6;
+  display:block;
+  text-shadow: 0 1px 1px #000000;
+}
+
+/* === end header ===*/
+
+/* --- main --- */
+.main{
+  margin: auto;
+  padding-left: 267px;
+  width: auto;  
+}
+/* === end main === */
+
+/* --- main left --- */
+.main-left{
+  padding: 25px 0;
+  width: 267px;
+  margin-top:3px;
+  background:url(../images/left.png) repeat-y top right #DADADA;
+  float:left;
+  position:absolute;
+  left:0;
+  height:100%;
+}
+
+.main-left .navigation{
+  font-size: 116%;
+  margin-bottom: 25px;
+  position: absolute;
+  width: 292px;
+  left:0;
+}
+
+.main-left ul{
+}
+
+.main-left ul li{
+  width:100%;
+}
+
+.main-left ul li a{
+  display:block;
+  height:40px;
+  line-height:40px;
+  text-decoration:none;
+  font-size:16px;
+  text-align: right;
+  padding-right: 67px;
+  text-shadow: 0 1px 1px #CCCCCC;
+}
+
+.main-left ul li.current{
+  background: url("../images/arrow_grey.png") no-repeat scroll left center transparent;
+}
+
+.main-left ul li.current a{
+  color:#ffffff;
+  text-shadow: 0 1px 1px #000;
+}
+
+.main-left ul li a.dashboard{
+}
+
+.main-left ul li a:hover{
+  color:#2181C2;
+}
+
+/* === end main left === */
+
+/* --- container --- */
+.container{
+  padding:35px;
+  height:100%;
+}
+
+.container .footer{
+  font-size: 12px;
+  padding: 20px 0;
+  margin: 40px 0 10px;
+  text-shadow: 0 1px 1px #DDDDDD;
+}
+
+/* == end container css === */
+
+/* --- content article --- */
+.content article{
+  clear:both;
+  overflow:hidden;
+}
+
+.content article header{
+  border-bottom: 3px solid #E6E6E6;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+}
+
+.content article header h1{
+  line-height:30px;
+  font-size:20px;
+  text-shadow: 0 1px 1px #DDDDDD;
+}
+
+/* === end content article ===*/
