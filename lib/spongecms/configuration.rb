@@ -22,7 +22,10 @@ module Spongecms
     # =>alias routes
     mattr_accessor :root
     @@root = "spongecms"
-
+    
+    # registered plugins
+    mattr_accessor :plugins
+    @@plugins = []
   end
 
 end
