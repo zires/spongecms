@@ -1,6 +1,6 @@
 # encoding: utf-8
 require 'active_support'
-require 'sinatra'
+require 'sinatra/base'
 require 'padrino-helpers'
 
 if defined?(Rails)
