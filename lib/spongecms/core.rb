@@ -7,7 +7,7 @@ module Spongecms
     # Use ::Core as middleware
 
     # spongecms index page
-    get "/#{settings.path}" do
+    root do
       @title = "Dashboard"
       haml :index
     end
