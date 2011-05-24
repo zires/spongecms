@@ -26,6 +26,10 @@ module Spongecms
     # registered plugins
     mattr_accessor :plugins
     @@plugins = []
+
+    # ORM
+    mattr_accessor :orm
+    @@orm = 'active_record'
   end
 
 end
