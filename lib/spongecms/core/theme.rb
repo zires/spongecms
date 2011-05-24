@@ -1,9 +1,27 @@
 # encoding: utf-8
 require 'spongecms/configuration'
-require 'active_support/concern'
 
 module Spongecms
   module Theme
+
+    module Helpers
+      # position holds hook for partial insert or update
+      def position(name)
+      end
+
+      # insert after position
+      def insert_after(name)
+      end
+
+      # insert before position
+      def insert_before(name)
+      end
+
+      # update position
+      def update(name)
+      end
+    end
+
     class << self
       # register theme helper
       def registered(app)
@@ -11,6 +29,7 @@ module Spongecms
         app.set :views, theme
         app.set :public, static_files
         app.layout :layout
+        app.helpers Spongecms::Theme::Helpers
       end
 
       def theme
