@@ -24,8 +24,8 @@ module Spongecms
     @@root = "spongecms"
     
     # registered plugins
-    mattr_accessor :plugins
-    @@plugins = []
+    mattr_accessor :extensions
+    @@extensions = []
 
     # ORM
     mattr_accessor :orm
