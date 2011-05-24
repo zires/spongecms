@@ -35,10 +35,9 @@ module Spongecms
       # via options
       # =>:get, :post, :put, :head, :delete.Default is :get
       def root(path = nil, opts = {}, &block)
-        handler = opts.key?(:via) ? opts.delete(:via): :get
+        handler = opts.key?(:via) ? opts.delete(:via).downcase : :get
         default_path = opts.key?(:default_path) ? opts.delete(:default_path): Spongecms::Configuration.root
         path = path.nil? ? "/#{default_path}" : "/#{default_path}/#{path}" 
-        #route handler, path, opts, &block 
         send handler, path, opts, &block
       end
 
