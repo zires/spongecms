@@ -2,7 +2,6 @@
 require 'sinatra/base'
 require 'padrino-helpers'
 require 'spongecms/core/route'
-require 'spongecms/core/theme'
 
 module Spongecms
 
@@ -10,7 +9,6 @@ module Spongecms
     # Use ::Base as Parent
     register Padrino::Helpers
     register Spongecms::Route 
-    register Spongecms::Theme
 
     include Spongecms::Route
     

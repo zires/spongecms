@@ -1,9 +1,9 @@
 # encoding: utf-8
-require 'spongecms/core/base'
+require 'spongecms/core/application'
 
 module Spongecms
 
-  class Core < Spongecms::Base
+  class Core < Spongecms::Application
     # Use ::Core as middleware
 
     # spongecms index page

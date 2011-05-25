@@ -25,7 +25,7 @@ module Spongecms
     
     # registered plugins
     mattr_accessor :extensions
-    @@extensions = []
+    @@extensions = [:image_gallery, :users, :plugins, :settings, :google_map]
 
     # ORM
     mattr_accessor :orm
