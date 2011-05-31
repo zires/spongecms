@@ -30,6 +30,10 @@ module Spongecms
     # ORM
     mattr_accessor :orm
     @@orm = 'active_record'
+
+    # Tilt
+    mattr_accessor :tilt
+    @@tilt = "haml"
   end
 
 end

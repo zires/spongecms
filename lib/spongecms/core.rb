@@ -9,7 +9,7 @@ module Spongecms
     # spongecms index page
     root do
       @title = "Dashboard"
-      haml :index
+      tilt :index
     end
 
   end

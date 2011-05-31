@@ -20,6 +20,12 @@ module Spongecms
       # update position
       def update(name)
       end
+
+      # render as default template handler
+      def tilt(template, opts={})
+        handler = opts.key?(:default) ? opts.delete(:default).downcase : Spongecms::Configuration.tilt
+        send handler.to_sym, template, opts
+      end
     end
 
     class << self
