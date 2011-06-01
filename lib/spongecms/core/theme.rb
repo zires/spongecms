@@ -1,30 +1,46 @@
 # encoding: utf-8
 require 'spongecms/configuration'
+require 'spongecms/core/hook'
 
 module Spongecms
   module Theme
-
+    
     module Helpers
       # position holds hook for partial insert or update
-      def position(name)
+      def position(name, *args, &block)
+        theme_hook.position(name, capture_html(*args, &block))
+        theme_hook.output(name)
       end
 
       # insert after position
-      def insert_after(name)
+      def insert_after(name, content = nil, &block)
+        content = content.nil? ? capture_html(&block) : content
+        theme_hook.position(name, content, :insert_after)
       end
 
       # insert before position
-      def insert_before(name)
+      def insert_before(name, content = nil, &block)
+        content = content.nil? ? capture_html(&block) : content
+        theme_hook.position(name, content, :insert_before)
       end
 
       # update position
-      def update(name)
+      def update(name, content = nil, &block)
+        content = content.nil? ? capture_html(&block) : content
+        theme_hook.position(name, content, :update)
       end
 
       # render as default template handler
       def tilt(template, opts={})
         handler = opts.key?(:default) ? opts.delete(:default).downcase : Spongecms::Configuration.tilt
         send handler.to_sym, template, opts
+      end
+      
+      protected
+      
+      # Hook instance
+      def theme_hook
+        Spongecms::Theme::Hook.instance
       end
     end
 
